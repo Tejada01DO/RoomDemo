@@ -28,12 +28,13 @@ import com.ucne.roomdemo.ui.theme.RoomDemoTheme
 
 @Composable
 fun TicketScreen(
-    viewModel: TicketViewModel
+    viewModel: TicketViewModel,
+    onSaveTicket: (TicketEntity) -> Unit
 ) {
     val tickets by viewModel.tickets.collectAsStateWithLifecycle()
     TicketBody(
         onSaveTicket = { ticket ->
-            viewModel.saveTicket(ticket)
+            onSaveTicket(ticket)
         }
     )
 }

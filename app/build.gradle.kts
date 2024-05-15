@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlinxSerialization)
     id("com.google.devtools.ksp") //Todo: 1. Investigar ksp
 }
 
@@ -66,6 +67,7 @@ dependencies {
 
     //navegacion
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 
     //Room
     implementation(libs.androidx.room.runtime)
